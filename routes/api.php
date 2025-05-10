@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CreateProducts;
 use App\Http\Controllers\ShowProducts;
 use App\Http\Controllers\UpdateController;
+use App\Http\Controllers\DeleteProducts;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -18,3 +19,4 @@ Route::get('/produtos/{id}', [ShowProducts::class, 'show_id']);
 
 Route::put('/produtos/{id}', [UpdateController::class, 'update']);
 
+Route::delete('/produtos/{id}', [DeleteProducts::class, 'delete']);
